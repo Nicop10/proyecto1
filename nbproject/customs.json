@@ -1,0 +1,22 @@
+{
+    "elements": {
+        "div": {
+            "attributes": {
+                "style": {},
+                "id": {},
+                "class": {}
+            }
+        },
+        "a": {
+            "attributes": {
+                "style": {},
+                "href": {},
+                "class": {}
+            }
+        },
+        "li": {}
+    },
+    "attributes": {
+        "javascript:": {}
+    }
+}

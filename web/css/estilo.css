@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: cursive  ;
+    padding: 10px;
+    background:#f1f1f1;
+}
+/*Estilo del encabezado*/
+.header{
+    background-image: url('css/golo.jpg');
+    padding : 30px;
+    text-align: center;
+    color: chartreuse;
+    margin: auto;
+    width: 500px;
+    font-family: Arial,helvetica,sans-serif;
+}
+.header h1{
+    font-size: 50px;
+}
+/*Estilo de la barra de navegacion superior*/
+.topnav{
+   overflow: hidden;
+   background-color: #333;
+}
+/*Estilo de los enlaces de topnav*/
+.topnav a{
+    float: left;
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/*Cambiar el color en el vuelo estacionario*/
+.topnav a :hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav>li{
+    float: left;
+}
+.topnav li a{
+    background-color: #000;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+}
+.topnav li a:hover{
+    background-color: #434343;
+}
+.topnav li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+.topnav li:hover>ul{
+    display: block;
+}
+.topnav li ul li{
+    position: relative;
+}
+.topnav li ul li ul{
+    right: -140px;
+    top: 0px;
+}
+/*Crear dos columnas desiguales que flotan una al lado de la otra !!!TODO TIENE QUE SUMAR 100%*/ 
+/*Columna izquierda*/
+.leftcolumn{
+    float: left;
+    width: 75%;
+}
+/*Columna derecha*/
+.rightcolumn{
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+/*imagen falsa*/
+.fakeimg{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+/*aniade un efecto de tarjeta para los articulos*/
+.card{
+    background-color: orangered;
+    padding: 20px;
+    margin-top: 20px;
+}
+/*Carros transparentes despues de las columnas*/
+.row{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*pie de pagina*/
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+/*Disenio RECEPTIVO: Cuando la pantalla tiene menos de 800px de ancho, haz que las dos columnas se apilen una encima de la otra 
+en lugar de una al lado de la otra*/
+@media screen and(max-width:800px){
+    .leftcolumn,.rightcolumn{
+        width: 50%;
+        padding: 0;
+    }
+}
+/*Disenio RECEPTIVO: Cuando la pantalla tiene menos de 400px de ancho, haz que las dos columnas se apilen una encima de la otra 
+en lugar de una al lado de la otra*/
+@media screen and(max-width:400px){
+    .nav a{
+        float: none;
+        width: 50%;
+    }
+}
