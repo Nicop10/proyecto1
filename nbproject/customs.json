@@ -14,7 +14,11 @@
                 "class": {}
             }
         },
-        "li": {}
+        "li": {
+            "attributes": {
+                "class": {}
+            }
+        }
     },
     "attributes": {
         "javascript:": {}
