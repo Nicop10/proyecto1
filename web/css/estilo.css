@@ -19,104 +19,48 @@ body{
 .header h1{
     font-size: 50px;
 }
-/*Estilo de la barra de navegacion superior*/
-.topnav{
-   overflow: hidden;
-   background-color: #333;
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
-/*Estilo de los enlaces de topnav*/
-.topnav a{
+li{
     float: left;
-    display: block;
-    color: blue;
+}
+li a,.dropbtn{
+    display: inline-block;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-/*Cambiar el color en el vuelo estacionario*/
-.topnav a :hover {
-    background-color: #ddd;
-    color: black;
+li a :hover,.dropdow:hover.dropbtn{
+    background-color: red;
 }
-.topnav>li{
-    float: left;
+li.dropdow{
+    display: inline-block;
 }
-.topnav li a{
-    background-color: #000;
-    color:#fff;
-    text-decoration: none;
-    padding: 10px 12px;
-    display: block;
-}
-.topnav li a:hover{
-    background-color: #434343;
-}
-.topnav li ul{
+.dropdow-content{
     display: none;
     position: absolute;
-    min-width: 140px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
-.topnav li:hover>ul{
+.dropdow-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
+    text-align: left;
 }
-.topnav li ul li{
-    position: relative;
-}
-.topnav li ul li ul{
-    right: -140px;
-    top: 0px;
-}
-/*Crear dos columnas desiguales que flotan una al lado de la otra !!!TODO TIENE QUE SUMAR 100%*/ 
-/*Columna izquierda*/
-.leftcolumn{
-    float: left;
-    width: 75%;
-}
-/*Columna derecha*/
-.rightcolumn{
-    float: left;
-    width: 25%;
+.dropdow-content a:hover{
     background-color: #f1f1f1;
-    padding-left: 20px;
 }
-/*imagen falsa*/
-.fakeimg{
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-/*aniade un efecto de tarjeta para los articulos*/
-.card{
-    background-color: orangered;
-    padding: 20px;
-    margin-top: 20px;
-}
-/*Carros transparentes despues de las columnas*/
-.row{
-    content: "";
-    display: table;
-    clear: both;
-}
-/*pie de pagina*/
-.footer{
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-}
-/*Disenio RECEPTIVO: Cuando la pantalla tiene menos de 800px de ancho, haz que las dos columnas se apilen una encima de la otra 
-en lugar de una al lado de la otra*/
-@media screen and(max-width:800px){
-    .leftcolumn,.rightcolumn{
-        width: 50%;
-        padding: 0;
-    }
-}
-/*Disenio RECEPTIVO: Cuando la pantalla tiene menos de 400px de ancho, haz que las dos columnas se apilen una encima de la otra 
-en lugar de una al lado de la otra*/
-@media screen and(max-width:400px){
-    .nav a{
-        float: none;
-        width: 50%;
-    }
+.dropdow:hover.dropdow-content{
+    display: block;
 }
