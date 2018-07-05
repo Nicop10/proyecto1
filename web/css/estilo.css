@@ -1,3 +1,6 @@
+body{
+    background-color: orangered
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -23,31 +26,40 @@ li a.active{
     color: white;
     background-color: #4CAF50;
 }
-@keyframes slidy {
-0% { left: 0%; }
-20% { left: 0%; }
-25% { left: -100%; }
-45% { left: -100%; }
-50% { left: -200%; }
-70% { left: -200%; }
-75% { left: -300%; }
-95% { left: -300%; }
-100% { left: -400%; }
+
+.slider{
+    width :100% ;
+    margin: auto;
+    overflow: hidden;
 }
 
-body { margin: 0; } 
-div#slider { overflow: hidden; }
-div#slider figure img { width: 20%; float: left; }
-div#slider figure { 
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 30s slidy infinite; 
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 70%;
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
 }
-img  { 
-    width: 780px;
-   height: 420px
+.slider li{
+    list-style: none;
+    width: 100%
+
 }
+.slider img{
+    width: 300%
+
+}
+
+@keyframes cambio{
+    
+    0%{margin-left:0;}
+    20%{margin-left:0;}
+    25%{margin-left:-100;}
+    45%{margin-left:-1000;}
+    50%{margin-left:-200;}
+    70%{margin-left:-200;}
+    75%{margin-left:-300;}
+    100%{margin-left:-300;}
+    
+}
+
